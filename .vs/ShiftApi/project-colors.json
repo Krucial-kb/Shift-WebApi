@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "45addb9a-0b20-48d7-b340-b524760c29f8": {
+      "ProjectGuid": "45addb9a-0b20-48d7-b340-b524760c29f8",
+      "DisplayName": "ShiftApi",
+      "ColorIndex": 0
+    },
+    "b2d3ed72-3508-4592-9f20-56dac1ae3a8a": {
+      "ProjectGuid": "b2d3ed72-3508-4592-9f20-56dac1ae3a8a",
+      "DisplayName": "ShiftDataAccess",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

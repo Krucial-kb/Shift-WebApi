@@ -1,9 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace ShiftWebApi
+#nullable disable
+
+namespace ShiftDataAccess.DbModels
 {
     public partial class ShiftDbContext : DbContext
     {
@@ -16,29 +17,42 @@ namespace ShiftWebApi
         {
         }
 
-        public virtual DbSet<User> Users { get; set; } = null!;
+        public virtual DbSet<User> Users { get; set; }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+
+        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.HasAnnotation("Relational:Collation", "SQL_Latin1_General_CP1_CI_AS");
+
             modelBuilder.Entity<User>(entity =>
             {
                 entity.Property(e => e.Email)
-                    .HasMaxLength(100)
+                    .IsRequired()
+                    .HasMaxLength(80)
                     .IsUnicode(false);
 
                 entity.Property(e => e.FirstName)
+                    .IsRequired()
                     .HasMaxLength(80)
                     .IsUnicode(false);
 
                 entity.Property(e => e.LastName)
+                    .IsRequired()
                     .HasMaxLength(80)
                     .IsUnicode(false);
 
                 entity.Property(e => e.Password)
-                    .HasMaxLength(50)
+                    .IsRequired()
+                    .HasMaxLength(80)
                     .IsUnicode(false);
 
-                entity.Property(e => e.UserName).HasMaxLength(50);
+                entity.Property(e => e.UserName)
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
             });
 
             OnModelCreatingPartial(modelBuilder);

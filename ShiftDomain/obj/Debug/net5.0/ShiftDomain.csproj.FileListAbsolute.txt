@@ -1,0 +1,12 @@
+K:\Development\Applications\Projects\Shift-Application\Shift-WebApi - Copy\ShiftApi\ShiftDomain\bin\Debug\net5.0\ShiftDomain.deps.json
+K:\Development\Applications\Projects\Shift-Application\Shift-WebApi - Copy\ShiftApi\ShiftDomain\bin\Debug\net5.0\ShiftDomain.dll
+K:\Development\Applications\Projects\Shift-Application\Shift-WebApi - Copy\ShiftApi\ShiftDomain\bin\Debug\net5.0\ref\ShiftDomain.dll
+K:\Development\Applications\Projects\Shift-Application\Shift-WebApi - Copy\ShiftApi\ShiftDomain\bin\Debug\net5.0\ShiftDomain.pdb
+K:\Development\Applications\Projects\Shift-Application\Shift-WebApi - Copy\ShiftApi\ShiftDomain\obj\Debug\net5.0\ShiftDomain.csproj.AssemblyReference.cache
+K:\Development\Applications\Projects\Shift-Application\Shift-WebApi - Copy\ShiftApi\ShiftDomain\obj\Debug\net5.0\ShiftDomain.GeneratedMSBuildEditorConfig.editorconfig
+K:\Development\Applications\Projects\Shift-Application\Shift-WebApi - Copy\ShiftApi\ShiftDomain\obj\Debug\net5.0\ShiftDomain.AssemblyInfoInputs.cache
+K:\Development\Applications\Projects\Shift-Application\Shift-WebApi - Copy\ShiftApi\ShiftDomain\obj\Debug\net5.0\ShiftDomain.AssemblyInfo.cs
+K:\Development\Applications\Projects\Shift-Application\Shift-WebApi - Copy\ShiftApi\ShiftDomain\obj\Debug\net5.0\ShiftDomain.csproj.CoreCompileInputs.cache
+K:\Development\Applications\Projects\Shift-Application\Shift-WebApi - Copy\ShiftApi\ShiftDomain\obj\Debug\net5.0\ShiftDomain.dll
+K:\Development\Applications\Projects\Shift-Application\Shift-WebApi - Copy\ShiftApi\ShiftDomain\obj\Debug\net5.0\ref\ShiftDomain.dll
+K:\Development\Applications\Projects\Shift-Application\Shift-WebApi - Copy\ShiftApi\ShiftDomain\obj\Debug\net5.0\ShiftDomain.pdb
