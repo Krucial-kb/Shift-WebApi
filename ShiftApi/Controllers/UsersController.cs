@@ -5,7 +5,12 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualStudio.Web.CodeGeneration;
 using ShiftDataAccess.DbModels;
+using ShiftDataAccess.Mapper;
+using ShiftDataAccess.Repositories;
+using ShiftDomain.DomainModels;
+using ShiftDomain.Interfaces;
 
 namespace ShiftApi.Controllers
 {
@@ -14,31 +19,43 @@ namespace ShiftApi.Controllers
     public class UsersController : ControllerBase
     {
         private readonly ShiftDbContext _ctx;
+        private readonly IUsersContract _repo;
 
-        public UsersController(ShiftDbContext context)
+        public UsersController(ShiftDbContext context, IUsersContract Repository)
         {
             _ctx = context;
+            _repo = Repository;
         }
 
         // GET: api/Users
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<User>>> GetUsers()
+        [ProducesResponseType(typeof(List<>), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<ActionResult<IEnumerable<ShiftDomain.DomainModels.Users>>> GetUsers()
         {
-            return await _ctx.Users.ToListAsync();
+            var allUsers = await _repo.GetUsers();
+            IEnumerable<ShiftDataAccess.DbModels.User> resource = allUsers.Select(ShiftDataMapper.MapperDomain);
+
+            return Ok(resource);
         }
 
         // GET: api/Users/5
         [HttpGet("{id}")]
+        [ProducesResponseType(typeof(User), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<ActionResult<User>> GetUser(int id)
         {
-            var user = await _ctx.Users.FindAsync(id);
+            var userById = await _repo.GetUserById(id);
 
-            if (user == null)
+            if (userById == null)
             {
                 return NotFound();
             }
 
-            return user;
+            return Ok(userById);
         }
 
         // PUT: api/Users/5

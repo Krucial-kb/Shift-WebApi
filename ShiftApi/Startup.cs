@@ -8,7 +8,10 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using ShiftApi.Controllers;
 using ShiftDataAccess.DbModels;
+using ShiftDataAccess.Repositories;
+using ShiftDomain.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,6 +31,9 @@ namespace ShiftApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            services.AddTransient<IUsersContract, UsersRepo>();
+
             // Add services to the container.
             services.AddDbContext<ShiftDbContext>(options =>
             {

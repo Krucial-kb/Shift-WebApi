@@ -12,7 +12,7 @@ namespace ShiftDataAccess.Mapper
     {
 
         #region ----- Data Access(DB) to Domain(ViewModels) -----
-        public static User MapDbToViewModel(ShiftDomain.DomainModels.Users _dbUsers)
+        public static User MapperDomain(ShiftDomain.DomainModels.Users _dbUsers)
         {
             return _dbUsers is null ? null : new ShiftDataAccess.DbModels.User
             { 
@@ -28,7 +28,7 @@ namespace ShiftDataAccess.Mapper
         #endregion
 
         #region ----- Domain(ViewModels) to Data Access(DB) -----
-        public static Users MapViewModelToDb(ShiftDataAccess.DbModels.User _daUsers)
+        public static Users MapperData(ShiftDataAccess.DbModels.User _daUsers)
         {
 
             return _daUsers is null ? null : new ShiftDomain.DomainModels.Users

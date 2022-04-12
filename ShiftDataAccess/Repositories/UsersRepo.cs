@@ -1,4 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
+using ShiftDataAccess.DbModels;
+using ShiftDataAccess.Mapper;
 using ShiftDomain.DomainModels;
 using ShiftDomain.Interfaces;
 using System;
@@ -11,16 +15,36 @@ namespace ShiftDataAccess.Repositories
 {
     public class UsersRepo : IUsersContract
     {
+        private readonly ShiftDbContext _ctx;
+        /*private readonly ILogger _logger;*/
 
-        public Task<ActionResult<IEnumerable<Users>>> GetUsers()
+        public UsersRepo(ShiftDbContext context)
         {
-            throw new NotImplementedException();
+            _ctx = context;
+            /*_logger = logger;*/
+
+        }
+
+        public async Task<IEnumerable<Users>> GetUsers()
+        {
+            var players = await _ctx.Users.ToListAsync();
+
+            var result = players.Select(ShiftDataMapper.MapperData);
+
+            return result;
         }
 
 
-        public Task<ActionResult<Users>> GetUser(int id)
+        public async Task<Users> GetUserById(int _userId)
         {
-            throw new NotImplementedException();
+            var _user = await _ctx.Users.FirstOrDefaultAsync(u => u.Id == _userId);
+            if (_user == null)
+            {
+                /*_logger.LogInformation($"User with id {_userId} not found.");*/
+                return null;
+            }
+            /*_logger.LogInformation($"Fetched user with id {_userId}.");*/
+            return ShiftDataMapper.MapperData(_user);
         }
 
         public Task<ActionResult<Users>> PostUser(Users user)

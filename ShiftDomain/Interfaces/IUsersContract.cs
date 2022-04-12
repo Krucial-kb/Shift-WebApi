@@ -10,8 +10,8 @@ namespace ShiftDomain.Interfaces
 {
     public interface IUsersContract
     {
-        Task<ActionResult<IEnumerable<Users>>> GetUsers();
-        Task<ActionResult<Users>> GetUser(int id);
+        Task<IEnumerable<Users>> GetUsers();
+        Task<Users> GetUserById(int id);
         Task<IActionResult> PutUser(int id, Users user);
         Task<ActionResult<Users>> PostUser(Users user);
         Task<IActionResult> DeleteUser(int id);

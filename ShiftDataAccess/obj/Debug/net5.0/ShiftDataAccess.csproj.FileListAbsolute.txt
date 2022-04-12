@@ -16,3 +16,21 @@ K:\Development\Applications\Projects\Shift-Application\Shift-WebApi - Copy\Shift
 K:\Development\Applications\Projects\Shift-Application\Shift-WebApi - Copy\ShiftApi\ShiftDataAccess\bin\Debug\net5.0\ShiftDomain.dll
 K:\Development\Applications\Projects\Shift-Application\Shift-WebApi - Copy\ShiftApi\ShiftDataAccess\bin\Debug\net5.0\ShiftDomain.pdb
 K:\Development\Applications\Projects\Shift-Application\Shift-WebApi - Copy\ShiftApi\ShiftDataAccess\obj\Debug\net5.0\ShiftDataAccess.csproj.CopyComplete
+K:\Development\Applications\Projects\Shift-Application\Shift-WebApi\ShiftDataAccess\obj\Debug\net5.0\ShiftDataAccess.csproj.AssemblyReference.cache
+K:\Development\Applications\Projects\Shift-Application\Shift-WebApi\ShiftDataAccess\obj\Debug\net5.0\ShiftDataAccess.GeneratedMSBuildEditorConfig.editorconfig
+K:\Development\Applications\Projects\Shift-Application\Shift-WebApi\ShiftDataAccess\obj\Debug\net5.0\ShiftDataAccess.AssemblyInfoInputs.cache
+K:\Development\Applications\Projects\Shift-Application\Shift-WebApi\ShiftDataAccess\obj\Debug\net5.0\ShiftDataAccess.AssemblyInfo.cs
+K:\Development\Applications\Projects\Shift-Application\Shift-WebApi\ShiftDataAccess\obj\Debug\net5.0\ShiftDataAccess.csproj.CoreCompileInputs.cache
+K:\Development\Applications\Projects\Shift-Application\Shift-WebApi\ShiftDataAccess\obj\Debug\net5.0\ShiftDataAccess.dll
+K:\Development\Applications\Projects\Shift-Application\Shift-WebApi\ShiftDataAccess\obj\Debug\net5.0\ref\ShiftDataAccess.dll
+K:\Development\Applications\Projects\Shift-Application\Shift-WebApi\ShiftDataAccess\obj\Debug\net5.0\ShiftDataAccess.pdb
+K:\Development\Applications\Projects\Shift-Application\Shift-WebApi\ShiftDataAccess\bin\Debug\net5.0\ShiftDataAccess.deps.json
+K:\Development\Applications\Projects\Shift-Application\Shift-WebApi\ShiftDataAccess\bin\Debug\net5.0\ShiftDataAccess.runtimeconfig.json
+K:\Development\Applications\Projects\Shift-Application\Shift-WebApi\ShiftDataAccess\bin\Debug\net5.0\ShiftDataAccess.runtimeconfig.dev.json
+K:\Development\Applications\Projects\Shift-Application\Shift-WebApi\ShiftDataAccess\bin\Debug\net5.0\ShiftDataAccess.dll
+K:\Development\Applications\Projects\Shift-Application\Shift-WebApi\ShiftDataAccess\bin\Debug\net5.0\ref\ShiftDataAccess.dll
+K:\Development\Applications\Projects\Shift-Application\Shift-WebApi\ShiftDataAccess\bin\Debug\net5.0\ShiftDataAccess.pdb
+K:\Development\Applications\Projects\Shift-Application\Shift-WebApi\ShiftDataAccess\bin\Debug\net5.0\ShiftDomain.dll
+K:\Development\Applications\Projects\Shift-Application\Shift-WebApi\ShiftDataAccess\bin\Debug\net5.0\ShiftDomain.pdb
+K:\Development\Applications\Projects\Shift-Application\Shift-WebApi\ShiftDataAccess\obj\Debug\net5.0\ShiftDataAccess.csproj.CopyComplete
+K:\Development\Applications\Projects\Shift-Application\Shift-WebApi\ShiftDataAccess\obj\Debug\net5.0\ShiftDataAccess.genruntimeconfig.cache
