@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rnZ4QUa1XhvEf5P8W3us0exnysxVTcINHdgKzLNgLMTapaEyW0hmdt0i9U9JoybB8kpbzFIon0NXVVtrfpsCuA==",
+  "dgSpecHash": "Z/5Az1fP4iyjsmhSkqkuGhE/oPVQcjznsF62p+aIc9Jxh5uieDb77RHvkapKSeFPsISSJ3WzV0j1Mzynm2NKqA==",
   "success": true,
-  "projectFilePath": "K:\\Development\\Applications\\Projects\\Shift-Application\\Shift-WebApi - Copy\\ShiftApi\\ShiftApi\\ShiftApi.csproj",
+  "projectFilePath": "K:\\Development\\Applications\\Projects\\Shift-Application\\Shift-WebApi\\ShiftApi\\ShiftApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mr_kb\\.nuget\\packages\\entityframework\\5.0.0\\entityframework.5.0.0.nupkg.sha512",
     "C:\\Users\\mr_kb\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
@@ -18,7 +18,7 @@
     "C:\\Users\\mr_kb\\.nuget\\packages\\microsoft.aspnetcore.http.extensions\\2.2.0\\microsoft.aspnetcore.http.extensions.2.2.0.nupkg.sha512",
     "C:\\Users\\mr_kb\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
     "C:\\Users\\mr_kb\\.nuget\\packages\\microsoft.aspnetcore.mvc.abstractions\\2.2.0\\microsoft.aspnetcore.mvc.abstractions.2.2.0.nupkg.sha512",
-    "C:\\Users\\mr_kb\\.nuget\\packages\\microsoft.aspnetcore.mvc.core\\2.2.0\\microsoft.aspnetcore.mvc.core.2.2.0.nupkg.sha512",
+    "C:\\Users\\mr_kb\\.nuget\\packages\\microsoft.aspnetcore.mvc.core\\2.2.5\\microsoft.aspnetcore.mvc.core.2.2.5.nupkg.sha512",
     "C:\\Users\\mr_kb\\.nuget\\packages\\microsoft.aspnetcore.mvc.dataannotations\\2.2.0\\microsoft.aspnetcore.mvc.dataannotations.2.2.0.nupkg.sha512",
     "C:\\Users\\mr_kb\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
     "C:\\Users\\mr_kb\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\5.0.0\\microsoft.aspnetcore.razor.language.5.0.0.nupkg.sha512",

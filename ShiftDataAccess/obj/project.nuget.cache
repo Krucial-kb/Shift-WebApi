@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Xih562GvjnFNIJxOG2USkrp0B47Ocu2VoyqYn9UMgig6JZBlevao8qhw6qGpD5NwjNnfxNVCoah1etWxM04YGA==",
+  "dgSpecHash": "dvrP2/4+g8mjGStWnhQcJulsW5AeW7/n8laE4NCq95UDikRrZPpdGGpx+nicOvHruimyMts+XwzsextJW33GqQ==",
   "success": true,
   "projectFilePath": "K:\\Development\\Applications\\Projects\\Shift-Application\\Shift-WebApi\\ShiftDataAccess\\ShiftDataAccess.csproj",
   "expectedPackageFiles": [
@@ -17,7 +17,7 @@
     "C:\\Users\\mr_kb\\.nuget\\packages\\microsoft.aspnetcore.http.extensions\\2.2.0\\microsoft.aspnetcore.http.extensions.2.2.0.nupkg.sha512",
     "C:\\Users\\mr_kb\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
     "C:\\Users\\mr_kb\\.nuget\\packages\\microsoft.aspnetcore.mvc.abstractions\\2.2.0\\microsoft.aspnetcore.mvc.abstractions.2.2.0.nupkg.sha512",
-    "C:\\Users\\mr_kb\\.nuget\\packages\\microsoft.aspnetcore.mvc.core\\2.2.0\\microsoft.aspnetcore.mvc.core.2.2.0.nupkg.sha512",
+    "C:\\Users\\mr_kb\\.nuget\\packages\\microsoft.aspnetcore.mvc.core\\2.2.5\\microsoft.aspnetcore.mvc.core.2.2.5.nupkg.sha512",
     "C:\\Users\\mr_kb\\.nuget\\packages\\microsoft.aspnetcore.mvc.dataannotations\\2.2.0\\microsoft.aspnetcore.mvc.dataannotations.2.2.0.nupkg.sha512",
     "C:\\Users\\mr_kb\\.nuget\\packages\\microsoft.aspnetcore.responsecaching.abstractions\\2.2.0\\microsoft.aspnetcore.responsecaching.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\mr_kb\\.nuget\\packages\\microsoft.aspnetcore.routing\\2.2.0\\microsoft.aspnetcore.routing.2.2.0.nupkg.sha512",

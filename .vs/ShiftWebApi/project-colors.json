@@ -1,0 +1,31 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "bf11234a-58d7-4fab-9e25-f0cdb80d6492": {
+      "ProjectGuid": "bf11234a-58d7-4fab-9e25-f0cdb80d6492",
+      "DisplayName": "ShiftDataAccess",
+      "ColorIndex": 0
+    },
+    "af4a13d8-b243-41c8-8399-c861cc8d2891": {
+      "ProjectGuid": "af4a13d8-b243-41c8-8399-c861cc8d2891",
+      "DisplayName": "ShiftWebApi",
+      "ColorIndex": 1
+    },
+    "09f0d93b-2efa-4b3e-8cc7-f6c24a3dd1b7": {
+      "ProjectGuid": "09f0d93b-2efa-4b3e-8cc7-f6c24a3dd1b7",
+      "DisplayName": "ShiftDomain",
+      "ColorIndex": 2
+    },
+    "8e06c59e-2182-435a-a1e3-8f629694cf45": {
+      "ProjectGuid": "8e06c59e-2182-435a-a1e3-8f629694cf45",
+      "DisplayName": "ShiftTest",
+      "ColorIndex": 3
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 4
+}

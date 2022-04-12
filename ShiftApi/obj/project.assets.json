@@ -182,7 +182,7 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.Abstractions.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Mvc.Core/2.2.0": {
+      "Microsoft.AspNetCore.Mvc.Core/2.2.5": {
         "type": "package",
         "dependencies": {
           "Microsoft.AspNetCore.Authentication.Core": "2.2.0",
@@ -2569,6 +2569,9 @@
       "ShiftDomain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.Core": "2.2.5"
+        },
         "compile": {
           "bin/placeholder/ShiftDomain.dll": {}
         },
@@ -2780,16 +2783,16 @@
         "microsoft.aspnetcore.mvc.abstractions.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Mvc.Core/2.2.0": {
-      "sha512": "ALiY4a6BYsghw8PT5+VU593Kqp911U3w9f/dH9/ZoI3ezDsDAGiObqPu/HP1oXK80Ceu0XdQ3F0bx5AXBeuN/Q==",
+    "Microsoft.AspNetCore.Mvc.Core/2.2.5": {
+      "sha512": "/8sr8ixIUD57UFwUntha9bOwex7/AkZfdk1f9oNJG1Ek7p/uuKVa7fuHmYZpQOf35Oxrt+2Ku4WPwMSbNxOuWg==",
       "type": "package",
-      "path": "microsoft.aspnetcore.mvc.core/2.2.0",
+      "path": "microsoft.aspnetcore.mvc.core/2.2.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.Core.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.Core.xml",
-        "microsoft.aspnetcore.mvc.core.2.2.0.nupkg.sha512",
+        "microsoft.aspnetcore.mvc.core.2.2.5.nupkg.sha512",
         "microsoft.aspnetcore.mvc.core.nuspec"
       ]
     },
@@ -8423,11 +8426,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "K:\\Development\\Applications\\Projects\\Shift-Application\\Shift-WebApi - Copy\\ShiftApi\\ShiftApi\\ShiftApi.csproj",
+      "projectUniqueName": "K:\\Development\\Applications\\Projects\\Shift-Application\\Shift-WebApi\\ShiftApi\\ShiftApi.csproj",
       "projectName": "ShiftApi",
-      "projectPath": "K:\\Development\\Applications\\Projects\\Shift-Application\\Shift-WebApi - Copy\\ShiftApi\\ShiftApi\\ShiftApi.csproj",
+      "projectPath": "K:\\Development\\Applications\\Projects\\Shift-Application\\Shift-WebApi\\ShiftApi\\ShiftApi.csproj",
       "packagesPath": "C:\\Users\\mr_kb\\.nuget\\packages\\",
-      "outputPath": "K:\\Development\\Applications\\Projects\\Shift-Application\\Shift-WebApi - Copy\\ShiftApi\\ShiftApi\\obj\\",
+      "outputPath": "K:\\Development\\Applications\\Projects\\Shift-Application\\Shift-WebApi\\ShiftApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -8448,8 +8451,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "K:\\Development\\Applications\\Projects\\Shift-Application\\Shift-WebApi - Copy\\ShiftApi\\ShiftDataAccess\\ShiftDataAccess.csproj": {
-              "projectPath": "K:\\Development\\Applications\\Projects\\Shift-Application\\Shift-WebApi - Copy\\ShiftApi\\ShiftDataAccess\\ShiftDataAccess.csproj"
+            "K:\\Development\\Applications\\Projects\\Shift-Application\\Shift-WebApi\\ShiftDataAccess\\ShiftDataAccess.csproj": {
+              "projectPath": "K:\\Development\\Applications\\Projects\\Shift-Application\\Shift-WebApi\\ShiftDataAccess\\ShiftDataAccess.csproj"
             }
           }
         }

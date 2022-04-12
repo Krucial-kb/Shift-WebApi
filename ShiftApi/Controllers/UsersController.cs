@@ -13,25 +13,25 @@ namespace ShiftApi.Controllers
     [ApiController]
     public class UsersController : ControllerBase
     {
-        private readonly ShiftDbContext _context;
+        private readonly ShiftDbContext _ctx;
 
         public UsersController(ShiftDbContext context)
         {
-            _context = context;
+            _ctx = context;
         }
 
         // GET: api/Users
         [HttpGet]
         public async Task<ActionResult<IEnumerable<User>>> GetUsers()
         {
-            return await _context.Users.ToListAsync();
+            return await _ctx.Users.ToListAsync();
         }
 
         // GET: api/Users/5
         [HttpGet("{id}")]
         public async Task<ActionResult<User>> GetUser(int id)
         {
-            var user = await _context.Users.FindAsync(id);
+            var user = await _ctx.Users.FindAsync(id);
 
             if (user == null)
             {
@@ -42,7 +42,6 @@ namespace ShiftApi.Controllers
         }
 
         // PUT: api/Users/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutUser(int id, User user)
         {
@@ -51,11 +50,11 @@ namespace ShiftApi.Controllers
                 return BadRequest();
             }
 
-            _context.Entry(user).State = EntityState.Modified;
+            _ctx.Entry(user).State = EntityState.Modified;
 
             try
             {
-                await _context.SaveChangesAsync();
+                await _ctx.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException)
             {
@@ -77,8 +76,8 @@ namespace ShiftApi.Controllers
         [HttpPost]
         public async Task<ActionResult<User>> PostUser(User user)
         {
-            _context.Users.Add(user);
-            await _context.SaveChangesAsync();
+            _ctx.Users.Add(user);
+            await _ctx.SaveChangesAsync();
 
             return CreatedAtAction("GetUser", new { id = user.Id }, user);
         }
@@ -87,21 +86,21 @@ namespace ShiftApi.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteUser(int id)
         {
-            var user = await _context.Users.FindAsync(id);
+            var user = await _ctx.Users.FindAsync(id);
             if (user == null)
             {
                 return NotFound();
             }
 
-            _context.Users.Remove(user);
-            await _context.SaveChangesAsync();
+            _ctx.Users.Remove(user);
+            await _ctx.SaveChangesAsync();
 
             return NoContent();
         }
 
         private bool UserExists(int id)
         {
-            return _context.Users.Any(e => e.Id == id);
+            return _ctx.Users.Any(e => e.Id == id);
         }
     }
 }
