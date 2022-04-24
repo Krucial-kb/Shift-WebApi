@@ -27,20 +27,27 @@ namespace ShiftApi.Controllers
             _repo = Repository;
         }
 
-        // GET: api/Users
+        /// <summary>
+        /// GET All
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         [ProducesResponseType(typeof(List<>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<ActionResult<IEnumerable<ShiftDomain.DomainModels.Users>>> GetUsers()
         {
-            var allUsers = await _repo.GetUsers();
+            var allUsers = await _repo.GetAllAsync();
             IEnumerable<ShiftDataAccess.DbModels.User> resource = allUsers.Select(ShiftDataMapper.MapperDomain);
 
             return Ok(resource);
         }
 
-        // GET: api/Users/5
+        /// <summary>
+        /// GET By Id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("{id}")]
         [ProducesResponseType(typeof(User), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
@@ -48,7 +55,7 @@ namespace ShiftApi.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<ActionResult<User>> GetUser(int id)
         {
-            var userById = await _repo.GetUserById(id);
+            var userById = await _repo.GetByIdAsync(id);
 
             if (userById == null)
             {
@@ -58,66 +65,79 @@ namespace ShiftApi.Controllers
             return Ok(userById);
         }
 
-        // PUT: api/Users/5
+        /// <summary>
+        /// PUT
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="_user"></param>
+        /// <returns></returns>
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutUser(int id, User user)
+        [ProducesResponseType(StatusCodes.Status204NoContent)] // success, nothing returned (works as intended, request fulfilled)
+        [ProducesResponseType(StatusCodes.Status400BadRequest)] // from an update failing due to user error (id does not match any existing resource/database id for the entity)
+        [ProducesResponseType(StatusCodes.Status404NotFound)] // from query of an id that does not exist
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)] // if something unexpectedly went wrong with the database or http request/response
+        public async Task<IActionResult> PutUser(int id, Users _user)
         {
-            if (id != user.Id)
+            if (id != _user.Id)
             {
                 return BadRequest();
             }
 
-            _ctx.Entry(user).State = EntityState.Modified;
-
-            try
+            /*_context.Entry(employee).State = EntityState.Modified;*/
+            if (!await _repo.UpdateAsync(_user, id))
             {
-                await _ctx.SaveChangesAsync();
+                return NotFound();
+                // if false, then modifying state failed
             }
-            catch (DbUpdateConcurrencyException)
+            else
             {
-                if (!UserExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+                return NoContent();
+                // successful put
             }
-
-            return NoContent();
         }
 
-        // POST: api/Users
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        /// <summary>
+        /// POST
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="_user"></param>
+        /// <returns></returns>
         [HttpPost]
-        public async Task<ActionResult<User>> PostUser(User user)
+        [ProducesResponseType(typeof(User), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<IActionResult> PostUser(int id, Users _user)
         {
-            _ctx.Users.Add(user);
-            await _ctx.SaveChangesAsync();
+            _repo.PostUserAsync(_user);
+            await _repo.SaveChangesAsync();
 
-            return CreatedAtAction("GetUser", new { id = user.Id }, user);
+            return CreatedAtAction("GetUser", new { id = _user.Id}, _user);
         }
 
-        // DELETE: api/Users/5
+        /// <summary>
+        /// DELETE
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpDelete("{id}")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)] // success, nothing returned (works as intended, request fulfilled)
+        [ProducesResponseType(StatusCodes.Status404NotFound)] // from query of an id that does not exist
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> DeleteUser(int id)
         {
-            var user = await _ctx.Users.FindAsync(id);
-            if (user == null)
+            var _deletedUser = await _repo.GetByIdAsync(id); // get this employee matching this id
+                                                                   // with tracking there are id errors even with just one row in the database so using AsNoTracking instead
+            if (_deletedUser == null)
             {
                 return NotFound();
             }
 
-            _ctx.Users.Remove(user);
-            await _ctx.SaveChangesAsync();
+            _repo.DeleteUser(_deletedUser);
+            await _repo.SaveChangesAsync();
 
             return NoContent();
         }
 
-        private bool UserExists(int id)
-        {
-            return _ctx.Users.Any(e => e.Id == id);
-        }
     }
 }

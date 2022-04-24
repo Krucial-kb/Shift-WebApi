@@ -10,7 +10,17 @@
       "ProjectGuid": "b2d3ed72-3508-4592-9f20-56dac1ae3a8a",
       "DisplayName": "ShiftDataAccess",
       "ColorIndex": 1
+    },
+    "f7d95583-519f-4288-a055-b8022e181ed6": {
+      "ProjectGuid": "f7d95583-519f-4288-a055-b8022e181ed6",
+      "DisplayName": "ShiftDomain",
+      "ColorIndex": 2
+    },
+    "95617b77-33e5-4ec6-877d-d4f217079a59": {
+      "ProjectGuid": "95617b77-33e5-4ec6-877d-d4f217079a59",
+      "DisplayName": "Shift-Client-blaz",
+      "ColorIndex": 3
     }
   },
-  "NextColorIndex": 2
+  "NextColorIndex": 4
 }

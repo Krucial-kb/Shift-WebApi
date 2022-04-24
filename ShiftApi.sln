@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShiftApi", "ShiftApi\ShiftA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShiftDataAccess", "ShiftDataAccess\ShiftDataAccess.csproj", "{B2D3ED72-3508-4592-9F20-56DAC1AE3A8A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShiftDomain", "ShiftDomain\ShiftDomain.csproj", "{F7D95583-519F-4288-A055-B8022E181ED6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShiftDomain", "ShiftDomain\ShiftDomain.csproj", "{F7D95583-519F-4288-A055-B8022E181ED6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShiftTest", "ShiftTest\ShiftTest.csproj", "{0D50B10A-8B5D-4171-AB34-CBA53EF7E5D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShiftTest", "ShiftTest\ShiftTest.csproj", "{0D50B10A-8B5D-4171-AB34-CBA53EF7E5D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shift-Client-blaz", "..\Shift-Client\Shift_Client-blazor\Shift-Client-blaz\Shift-Client-blaz.csproj", "{95617B77-33E5-4EC6-877D-D4F217079A59}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{0D50B10A-8B5D-4171-AB34-CBA53EF7E5D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D50B10A-8B5D-4171-AB34-CBA53EF7E5D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D50B10A-8B5D-4171-AB34-CBA53EF7E5D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95617B77-33E5-4EC6-877D-D4F217079A59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95617B77-33E5-4EC6-877D-D4F217079A59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95617B77-33E5-4EC6-877D-D4F217079A59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95617B77-33E5-4EC6-877D-D4F217079A59}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

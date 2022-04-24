@@ -16,16 +16,13 @@ namespace ShiftDataAccess.Repositories
     public class UsersRepo : IUsersContract
     {
         private readonly ShiftDbContext _ctx;
-        /*private readonly ILogger _logger;*/
 
         public UsersRepo(ShiftDbContext context)
         {
             _ctx = context;
-            /*_logger = logger;*/
-
         }
 
-        public async Task<IEnumerable<Users>> GetUsers()
+        public async Task<IEnumerable<Users>> GetAllAsync()
         {
             var players = await _ctx.Users.ToListAsync();
 
@@ -35,37 +32,64 @@ namespace ShiftDataAccess.Repositories
         }
 
 
-        public async Task<Users> GetUserById(int _userId)
+        public async Task<Users> GetByIdAsync(int _userId)
         {
             var _user = await _ctx.Users.FirstOrDefaultAsync(u => u.Id == _userId);
             if (_user == null)
             {
-                /*_logger.LogInformation($"User with id {_userId} not found.");*/
                 return null;
             }
-            /*_logger.LogInformation($"Fetched user with id {_userId}.");*/
             return ShiftDataMapper.MapperData(_user);
         }
 
-        public Task<ActionResult<Users>> PostUser(Users user)
+        public void PostUserAsync(Users _user)
         {
-            throw new NotImplementedException();
+            var mapUser = ShiftDataMapper.MapperDomain(_user);
+            _ctx.Set<ShiftDataAccess.DbModels.User>().Add(mapUser);
         }
 
-        public Task<IActionResult> PutUser(int id, Users user)
+        public async Task<bool> UpdateAsync(Users updatedUser, int id)
         {
-            throw new NotImplementedException();
+            var mappesUser = ShiftDataMapper.MapperDomain(updatedUser);
+            /*_context.Entry(employee).State = EntityState.Modified;*/
+            _ctx.Entry(mappesUser).State = EntityState.Modified;
+
+            try
+            {
+                await SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (mappesUser == null)
+                {
+                    return false;
+                    // employee not found
+                }
+                else
+                {
+                    throw;
+                }
+            }
+            return true;
+            // it worked, so return true
         }
 
-        public Task<IActionResult> DeleteUser(int id)
+        public void DeleteUser(Users _user)
         {
-            throw new NotImplementedException();
+            var mappedUser = ShiftDataMapper.MapperDomain(_user);
+            _ctx.Set<User>().Remove(mappedUser);
         }
 
 
-        public Task<bool> UserExists(int id)
+        public async Task<int> SaveChangesAsync()
         {
-            throw new NotImplementedException();
+            return await _ctx.SaveChangesAsync();
         }
+
+        public async Task<IEnumerable<Users>> ToListAsync()
+        {
+            return await GetAllAsync();
+        }
+
     }
 }
